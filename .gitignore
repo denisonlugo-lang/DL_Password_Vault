@@ -1,0 +1,16 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore local vault files (DO NOT upload secrets)
+passwords.txt
+key.key
+master.hash
+
+# Ignore virtual environment
+venv/
+
+# Ignore PyInstaller build files
+build/
+dist/
+*.spec
