@@ -1,0 +1,52 @@
+📘 requirements_info.md
+🔐 DL Password Vault — Dependency Overview
+
+This document provides an overview of all Python dependencies used in DL Password Vault, explaining their purpose and how each one contributes to the application's functionality.
+
+🧩 Core Dependencies
+Package	Purpose	Usage in the App
+cryptography	Provides strong encryption algorithms, including Fernet (AES-based symmetric encryption).	Encrypts and decrypts stored passwords using a locally generated key (key.key).
+openai	Integrates OpenAI’s GPT model to generate strong, random passwords and potentially future AI-assisted security features.	Used for AI password generation in the “Generate Password (AI)” feature.
+zxcvbn	Evaluates password strength based on patterns, length, and character variety.	Provides a strength meter and helps users create more secure passwords.
+pyttsx3	Text-to-speech engine that works offline.	Powers the optional voice feedback in the UI for accessibility and enhanced user experience.
+Pillow (PIL)	Image processing library for Python.	Used to display and resize images (like the app logo) in the Tkinter interface.
+🧰 Standard Library Modules (No Installation Needed)
+
+These come with Python by default — they are included here for reference but do not need to be listed in requirements.txt:
+
+Module	Function
+tkinter	Builds the graphical user interface (buttons, labels, text fields).
+os, json	File system and data serialization.
+hashlib	Hashes master passwords securely.
+random, string	Generates fallback passwords if OpenAI is unavailable.
+csv	Optional export/import capability for password data.
+⚙️ Optional Add-Ons (Not Required but Useful)
+Package	Description	Why You Might Add It
+python-dotenv	Manages environment variables from a .env file.	Recommended for securely storing your OpenAI API key instead of hard-coding it.
+requests	Handles HTTP requests easily.	Useful if you expand the app to include remote syncing or online services.
+💡 Installation
+
+To install all required dependencies:
+
+pip install -r requirements.txt
+
+
+To include optional ones as well:
+
+pip install -r requirements.txt python-dotenv requests
+
+🧠 Version Compatibility
+
+The project has been tested on:
+
+Python 3.11+
+
+Compatible with Windows, macOS, and Linux systems.
+
+👤 Author
+
+Denison Lugo
+Boston, MA | Cybersecurity & Software Development
+📧 denisonlugo@gmail.com
+
+🔗 GitHub: denisonlugo-lang
